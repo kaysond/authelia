@@ -63,5 +63,7 @@ func (p Authorizer) GetRequiredLevel(subject Subject, object Object) Level {
 	logger.Debugf("No matching rule for subject %s and url %s... Applying default policy.",
 		subject.String(), object.String())
 
+	//AutoACL
+
 	return p.defaultPolicy
 }
